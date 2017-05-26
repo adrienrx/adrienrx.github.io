@@ -1,3 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-25T11:01:20+01:00</updated><id>http://localhost:4000/</id><title type="html">notebook-dev</title><subtitle>NO!</subtitle><entry><title type="html">Hello</title><link href="http://localhost:4000/notebook-dev/2017/05/25/Hello.html" rel="alternate" type="text/html" title="Hello" /><published>2017-05-25T10:32:55+01:00</published><updated>2017-05-25T10:32:55+01:00</updated><id>http://localhost:4000/notebook-dev/2017/05/25/Hello</id><content type="html" xml:base="http://localhost:4000/notebook-dev/2017/05/25/Hello.html">&lt;p&gt;Hello,&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-26T15:59:55+01:00</updated><id>http://localhost:4000/</id><title type="html">notebook-dev</title><subtitle>NO!</subtitle><entry><title type="html">Robolectric recipe</title><link href="http://localhost:4000/notebook-dev/2017/05/26/Robolectric-Recipe.html" rel="alternate" type="text/html" title="Robolectric recipe" /><published>2017-05-26T10:32:55+01:00</published><updated>2017-05-26T10:32:55+01:00</updated><id>http://localhost:4000/notebook-dev/2017/05/26/Robolectric-Recipe</id><content type="html" xml:base="http://localhost:4000/notebook-dev/2017/05/26/Robolectric-Recipe.html">&lt;p&gt;Here are just some of snipet I use when writing some robolectric test.&lt;/p&gt;
+
+&lt;p&gt;Get the last AlertDialog
+        final AlertDialog clerkSuggestion = ShadowAlertDialog.getLatestAlertDialog();
+        assertThat(clerkSuggestion, notNullValue());
+        final ShadowAlertDialog sClerkSuggestion = shadowOf(clerkSuggestion);
+        assertThat(sClerkSuggestion.getTitle(), IsEqual.equalTo(“title”) );&lt;/p&gt;
+
+&lt;p&gt;Get last Media Player created
+        ShadowMediaPlayer.setCreateListener(new ShadowMediaPlayer.CreateListener() {
+            @Override
+            public void onCreate(final MediaPlayer player, final ShadowMediaPlayer shadow) {&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        }
+    });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Perform a click on a view
+	final EditText usernameView = (EditText) activity.findViewById(R.id.username);
+        assertThat(usernameView, notNullValue());
+        final long downTime = uptimeMillis();
+        final long eventTime = uptimeMillis() + 100;
+        final float x = usernameView.getX() + 10;
+        final float y = usernameView.getY() + 10;
+        final MotionEvent motionEvent = obtain(downTime, eventTime, ACTION_UP, x, y, 0);
+        usernameView.dispatchTouchEvent(motionEvent);&lt;/p&gt;</content><author><name></name></author><summary type="html">Here are just some of snipet I use when writing some robolectric test.</summary></entry><entry><title type="html">Hello</title><link href="http://localhost:4000/notebook-dev/2017/05/25/Hello.html" rel="alternate" type="text/html" title="Hello" /><published>2017-05-25T10:32:55+01:00</published><updated>2017-05-25T10:32:55+01:00</updated><id>http://localhost:4000/notebook-dev/2017/05/25/Hello</id><content type="html" xml:base="http://localhost:4000/notebook-dev/2017/05/25/Hello.html">&lt;p&gt;Hello,&lt;/p&gt;
 
 &lt;p&gt;This little website is the place where I put snippet and other pieces of code.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello,</summary></entry></feed>
